@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/api": {
-        target: "https://llm-chatbot-6jw4.vercel.app",
+        target: "https://vercel.com",
         changeOrigin: true,
       },
     },
