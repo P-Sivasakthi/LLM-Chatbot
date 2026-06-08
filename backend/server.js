@@ -96,7 +96,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://vercel.com",
+      "https://llm-chatbot-woad.vercel.app",
     ],
   })
 );
