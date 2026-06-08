@@ -7,7 +7,9 @@ const PORT = process.env.PORT || 3001;
 const OLLAMA_BASE_URL = process.env.OLLAMA_BASE_URL || "http://localhost:11434";
 const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "llama3.2";
 
-app.use(cors());
+app.use(cors({
+  origin: "https://vercel.com/sivasakthi-paramasivam-s-projects/llm-chatbot",
+}));
 app.use(express.json());
 
 app.get("/api/health", (_req, res) => {
