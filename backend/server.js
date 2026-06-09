@@ -79,7 +79,9 @@ import Groq from "groq-sdk";
 
 const app = express();
 
-const PORT = process.env.PORT || 3001;
+const FRONTEND_URL = process.env.FRONTEND_URL;
+const PORT = process.env.PORT;
+
 
 const GROQ_MODEL =
   process.env.GROQ_MODEL;
@@ -90,12 +92,10 @@ const groq = new Groq({
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5174",
-      "https://your-frontend.vercel.app",
-    ],
+    origin: FRONTEND_URL,
   })
 );
+
 
 app.use(express.json());
 
