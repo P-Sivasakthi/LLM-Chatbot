@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const API_URL = "https://llm-chatbot-6jw4.vercel.app/api/chat";
+const API_URL = import.meta.env.VITE_BACKEND_URL + "/api/chat";
 const STORAGE_KEY = "llm-chatbot-chats";
 
 export function createChat(title = "New chat") {
